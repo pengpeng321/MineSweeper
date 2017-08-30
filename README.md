@@ -1,5 +1,4 @@
 # MineSweeper
-Author： pengpeng
 
 A version of Minesweeper based on CSharp.
 
