@@ -11,5 +11,17 @@
     <Setting Name="Sweep_num" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">10</Value>
     </Setting>
+    <Setting Name="beginner" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">999999999</Value>
+    </Setting>
+    <Setting Name="intermediate" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">999999999</Value>
+    </Setting>
+    <Setting Name="expert" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">999999999</Value>
+    </Setting>
+    <Setting Name="Audio" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

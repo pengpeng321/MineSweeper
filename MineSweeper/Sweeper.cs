@@ -19,6 +19,7 @@ namespace MineSweeper
         private int nOffsetY;         //paint中使用 显示界面 距离 整个界面上边的距离
         private Point mousefocus_new; //鼠标新位置
         private Point mousefocus_old; //鼠标旧位置
+        
 
         public Form_Main()
         {
@@ -31,6 +32,7 @@ namespace MineSweeper
             Sweep_width = Properties.Settings.Default.Sweep_width;   //初始化。从以前的设置读取列数
             mousefocus_new.X = mousefocus_old.X = 0;            //初始化鼠标位置
             mousefocus_new.Y = mousefocus_old.Y = 0;
+            AudioAToolStripMenuItem.Checked = Properties.Settings.Default.Audio; //初始化音量设置
             SetLevel();
             UpdateSize(Sweep_width, Sweep_high);
         }
@@ -77,6 +79,9 @@ namespace MineSweeper
             }
            
         }              //寻找鼠标的位置，在哪个32x32的方格里
+
+
+
 
         private void BeginnerBToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -132,6 +137,25 @@ namespace MineSweeper
             Application.Exit();
         }
 
+        private void RankRToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_Rank k = new Form_Rank();
+            int h = (this.ClientSize.Height - k.ClientSize.Height) / 2;
+            int w = (this.ClientSize.Width - k.ClientSize.Width) / 2;
+            k.Show();
+            k.Location = new Point(this.Location.X + w, this.Location.Y + h);
+        }
 
+        private void AudioAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Audio = !Properties.Settings.Default.Audio;
+            AudioAToolStripMenuItem.Checked = Properties.Settings.Default.Audio;
+            Properties.Settings.Default.Save();
+        }
+
+        private void AboutAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Author: pengpeng\n\nVersion:1.0.1", "about");
+        }
     }
 }

@@ -7,3 +7,4 @@ F:\new_mywork\c#_learning\MineSweeper\MineSweeper\obj\Debug\MineSweeper.Properti
 F:\new_mywork\c#_learning\MineSweeper\MineSweeper\obj\Debug\MineSweeper.csproj.GenerateResource.Cache
 F:\new_mywork\c#_learning\MineSweeper\MineSweeper\obj\Debug\MineSweeper.exe
 F:\new_mywork\c#_learning\MineSweeper\MineSweeper\obj\Debug\MineSweeper.pdb
+F:\new_mywork\c#_learning\MineSweeper\MineSweeper\obj\Debug\MineSweeper.Form_Rank.resources

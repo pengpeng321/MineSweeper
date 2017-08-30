@@ -58,5 +58,53 @@ namespace MineSweeper.Properties {
                 this["Sweep_num"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("999999999")]
+        public int beginner {
+            get {
+                return ((int)(this["beginner"]));
+            }
+            set {
+                this["beginner"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("999999999")]
+        public int intermediate {
+            get {
+                return ((int)(this["intermediate"]));
+            }
+            set {
+                this["intermediate"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("999999999")]
+        public int expert {
+            get {
+                return ((int)(this["expert"]));
+            }
+            set {
+                this["expert"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Audio {
+            get {
+                return ((bool)(this["Audio"]));
+            }
+            set {
+                this["Audio"] = value;
+            }
+        }
     }
 }
