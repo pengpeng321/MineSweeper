@@ -1,0 +1,9 @@
+F:\new_mywork\c#_learning\MineSweeper\MineSweeper\bin\Debug\MineSweeper.exe.config
+F:\new_mywork\c#_learning\MineSweeper\MineSweeper\bin\Debug\MineSweeper.exe
+F:\new_mywork\c#_learning\MineSweeper\MineSweeper\bin\Debug\MineSweeper.pdb
+F:\new_mywork\c#_learning\MineSweeper\MineSweeper\obj\Debug\MineSweeper.csprojResolveAssemblyReference.cache
+F:\new_mywork\c#_learning\MineSweeper\MineSweeper\obj\Debug\MineSweeper.Form_Main.resources
+F:\new_mywork\c#_learning\MineSweeper\MineSweeper\obj\Debug\MineSweeper.Properties.Resources.resources
+F:\new_mywork\c#_learning\MineSweeper\MineSweeper\obj\Debug\MineSweeper.csproj.GenerateResource.Cache
+F:\new_mywork\c#_learning\MineSweeper\MineSweeper\obj\Debug\MineSweeper.exe
+F:\new_mywork\c#_learning\MineSweeper\MineSweeper\obj\Debug\MineSweeper.pdb
