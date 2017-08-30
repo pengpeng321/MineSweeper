@@ -31,7 +31,8 @@ namespace MineSweeper
             Sweep_width = Properties.Settings.Default.Sweep_width;   //初始化。从以前的设置读取列数
             mousefocus_new.X = mousefocus_old.X = 0;            //初始化鼠标位置
             mousefocus_new.Y = mousefocus_old.Y = 0;
-            UpdateSize(Sweep_width,Sweep_high);
+            SetLevel();
+            UpdateSize(Sweep_width, Sweep_high);
         }
         private void Form_Main_Paint(object sender, PaintEventArgs e)
         {
@@ -57,8 +58,7 @@ namespace MineSweeper
             int high_update = high_temp * 34 + 12;
             Width = width_update + (this.Size.Width - this.ClientSize.Width);
             Height = high_update + UpMenu.Height + TableLayoutPanel_Main.Height + (this.Size.Height - this.ClientSize.Height);
-        }                //自适应窗口大小（更新窗口大小）
-
+        }                         //自适应窗口大小（更新窗口大小）
         private void Form_Main_MouseMove(object sender, MouseEventArgs e)
         {
             int x = (e.X - nOffsetX) / 34 + 1;
@@ -75,6 +75,63 @@ namespace MineSweeper
                 mousefocus_old = mousefocus_new;
                 Refresh();
             }
+           
+        }              //寻找鼠标的位置，在哪个32x32的方格里
+
+        private void BeginnerBToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sweep_width = 10;
+            Sweep_high = 10;
+            Sweep_num = 10;
+            SetLevel();
         }
+        private void IntermediateIToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sweep_width = 16;
+            Sweep_high = 16;
+            Sweep_num = 40;
+            SetLevel();
+        }
+        private void ExpertEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sweep_width = 30;
+            Sweep_high = 16;
+            Sweep_num = 99;
+            SetLevel();
+        }
+        private void SetLevel()
+        {
+            BeginnerBToolStripMenuItem.Checked = false;
+            IntermediateIToolStripMenuItem.Checked = false;
+            ExpertEToolStripMenuItem.Checked = false;
+            switch (Sweep_num)
+            {
+                case 10: BeginnerBToolStripMenuItem.Checked = true; break;
+                case 40: IntermediateIToolStripMenuItem.Checked = true; break;
+                case 99: ExpertEToolStripMenuItem.Checked = true; break;
+                default: break;
+            }
+            Properties.Settings.Default.Sweep_high = Sweep_high;
+            Properties.Settings.Default.Sweep_width = Sweep_width;
+            Properties.Settings.Default.Sweep_num = Sweep_num;
+            Properties.Settings.Default.Save();
+            NewGame();
+        }
+        private void NewGame()
+        {
+            UpdateSize(Sweep_width, Sweep_high);
+            Refresh();
+        }
+
+        private void NewGameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewGame();
+        }
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+
     }
 }
